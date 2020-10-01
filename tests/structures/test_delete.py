@@ -2,7 +2,13 @@ from ..utils import TranspileTestCase
 
 
 class DeleteTests(TranspileTestCase):
+    """
+    Test to delete
+    """
     def test_delete_from_dict(self):
+        """
+        Test for deleting from dict
+        """
         self.assertCodeExecution("""
             x = {'a': 1, 'b': 2}
 
@@ -30,6 +36,9 @@ class DeleteTests(TranspileTestCase):
             """)
 
     def test_delete_from_list(self):
+        """
+        Test case for deleting from list
+        """
         self.assertCodeExecution("""
             x = [1, 2, 3, 4, 5, 6]
 
@@ -56,6 +65,9 @@ class DeleteTests(TranspileTestCase):
             """)
 
     def test_delete_attribute(self):
+        """
+        Test case for deleting Attribute
+        """
         self.assertCodeExecution("""
             class MyObject:
                 def __init__(self):
@@ -108,6 +120,9 @@ class DeleteTests(TranspileTestCase):
             """)
 
     def test_delete_local(self):
+        """
+        Test case for deleting Local
+        """
         self.assertCodeExecution("""
             x = 123
             print('x = ', x)
